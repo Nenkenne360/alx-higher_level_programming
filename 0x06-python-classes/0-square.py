@@ -1,6 +1,4 @@
 #!/usr/bin/python3
 class Square:
-    pass
-    """
-    creates a square class object
-    """
+    def __init__(self, side_length):
+        self.side_length = side_length
