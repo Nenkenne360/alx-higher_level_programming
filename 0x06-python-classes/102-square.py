@@ -1,61 +1,39 @@
 #!/usr/bin/python3
-class Square:
-    """
-    creates square object
+class Square(object):
+    """Class square with one attribute.
+
+    Args:
+        __size (int): size of a square.
+
+    Raises:
+        TypeError: if not an int
+        ValueError: if negative int
     """
     def __init__(self, size=0):
+        """Initialize class with attributes."""
         self.__size = size
-    """
-    initializes a square object with size
-    Args:
-        __size(int): size of square private property
-    """
+
     @property
     def size(self):
+        """Gets the value of __size
+
+        Sets the value of __size
+        """
         return self.__size
-    """
-    gets size of square
-    """
+
     @size.setter
     def size(self, value):
-        if(type(value) is not int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        if(value < 0):
+        elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = value
-        """
-        sets size of square
-        square must be integer and greater than 0
-        """
+        else:
+            self.__size = value
+
     def area(self):
-        return(self.__size**2)
+        """squares the size of the square.
+
+        Returns:
+            the current square area.
         """
-        return area of square based on size
-        """
-    def __lt__(self, other):
-        return self.area() < other.area()
-        """
-        less than
-        """
-    def __eq__(self, other):
-        return self.area() == other.area()
-        """
-        equal to
-        """
-    def __le__(self, other):
-        return self.area() <= other.area()
-        """
-        less than equal to
-        """
-    def __gt__(self, other):
-        return self.area() > other.area()
-        """
-        greater than
-        """
-    def __ge__(self, other):
-        return self.area() >= other.area()
-        """
-        greater equal
-        """
-    def __ne__(self, other):
-        return self.area() != other.area()
+        return self.__size ** 2

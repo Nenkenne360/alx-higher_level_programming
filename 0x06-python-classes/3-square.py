@@ -1,22 +1,27 @@
 #!/usr/bin/python3
-class Square:
-    """
-    creates a square object
+class Square(object):
+    """Class square with one attribute.
+
+    Args:
+        __size (int): size of a square.
+
+    Raises:
+        TypeError: if not an int
+        ValueError: if negative int
     """
     def __init__(self, size=0):
-        if(type(size) is not int):
+        """Initialize class with attributes."""
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        if(size < 0):
+        elif size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
-        """
-        initializes instance of a square
-        Args:
-            __size(int): size of square
-            __position(tuple):position
-        """
+        else:
+            self.__size = size
+
     def area(self):
-        return(self.__size**2)
-    """
-    returns area of square based on size
-    """
+        """squares the size of the square.
+
+        Returns:
+            the current square area.
+        """
+        return self.__size ** 2
