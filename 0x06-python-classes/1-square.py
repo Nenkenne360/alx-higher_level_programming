@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-class Square(object):
-    """Class square with one attribute.
+'''1-square.py: Python script that defines square,
+   private instantiation attribute of size'''
 
-    Args:
-        __size: size of a square.
-    """
-    def __init__(self, size):
-        """Initialize class with attributes."""
-        self.__size = size
+
+class Square:
+        '''Creates  Square type'''
+
+        def __init__(self, size):
+            '''Initializes Square with size'''
+
+            self.__size = size

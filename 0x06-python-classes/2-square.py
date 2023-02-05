@@ -1,19 +1,14 @@
 #!/usr/bin/python3
-class Square(object):
-    """Class square with one attribute.
+'''2-square.py: Defines size as an int and also >= 0'''
 
-    Args:
-        __size (int): size of a square.
 
-    Raises:
-        TypeError: if not an int
-        ValueError: if negative int
-    """
+class Square:
+    '''Creates  Square type'''
+
     def __init__(self, size=0):
-        """Initialize class with attributes."""
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+        '''Initializes Square with size'''
+        self.__size = size
+        if type(size) is not int:
+            raise TypeError('size must be an integer')
+        if size < 0:
+            raise ValueError('size must be >= 0')
