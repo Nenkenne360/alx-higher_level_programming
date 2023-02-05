@@ -7,3 +7,6 @@ class Square:
     of the square.
     """
     pass
+    """
+    The class does nothing
+    """
