@@ -7,6 +7,8 @@ class Square:
         '''Creates  Square type'''
 
         def __init__(self, size):
-            '''Initializes Square with size'''
+            '''Initializes Square with size with,
+            no type/value verification'''
 
             self.__size = size
+            
