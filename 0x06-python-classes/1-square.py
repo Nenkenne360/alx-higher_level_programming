@@ -10,3 +10,4 @@ class Square:
         """ Initializes Square with size with,
         no type/value verification"""
         self.__size = size
+        
