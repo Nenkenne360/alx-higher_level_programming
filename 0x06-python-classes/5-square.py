@@ -1,28 +1,36 @@
 #!/usr/bin/python3
-class Square:
+'''5-square.py: Prints to stdout the square with the character # '''
 
+
+class Square:
+    '''Creates  Square type'''
     def __init__(self, size=0):
-        self.__size = size
+        '''Initializes Square with size'''
+        self.size = size
 
     @property
     def size(self):
+        '''Defines the size of square and returns its value'''
         return self.__size
 
     @size.setter
     def size(self, value):
-        if(type(value) is not int):
-            raise TypeError("size must be an integer")
-        if(value < 0):
-            raise ValueError("size must be >= 0")
+        '''Defines the value of size of square and checks if >= 0'''
         self.__size = value
+        if type(value) is not int:
+            raise TypeError('size must be an integer')
+        if value < 0:
+            raise ValueError('size must be >= 0')
 
     def area(self):
-        return(self.__size**2)
+        '''Defines the area of a square'''
+        return self.__size * self.__size
 
     def my_print(self):
-        if(self.size):
-            for x in range(self.size):
-                print("#" * self.size, end='')
-                print()
-        else:
+        '''Prints in stdout the square with character #'''
+        for a in range(self.__size):
+            for b in range(self.__size):
+                print('#', end="")
+            print()
+        if self.__size == 0:
             print()

@@ -1,12 +1,13 @@
 #!/usr/bin/python3
+"""1-square.py: Python script that defines square,
+   private instantiation attribute of size"""
+
+
 class Square:
-    """
-    creates a square class object
-    """
+    
+    """Creates  Square type"""
     def __init__(self, size):
+        """ Initializes Square with size with,
+        no type/value verification"""
         self.__size = size
-    """
-    initializes a square object with parameters
-    args:
-        __size(int): size of the square
-    """
+        
