@@ -1,4 +1,5 @@
 -- no name order
-SELECT score, name FROM second_table
+SELECT score, name, COUNT(*) AS number FROM second_table
 WHERE name <> ''
-GROUP BY score DESC, name DESC;
+GROUP BY score, name 
+ORDER BY number DESC;
